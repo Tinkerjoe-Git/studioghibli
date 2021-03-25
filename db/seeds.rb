@@ -6,7 +6,7 @@ API.new.get_ghibli_data
 
 
 GhibliData.all.each do |film|
-    film1=GhibliData.create(
+    film1=Ghibli.create(
         title: film.title,
         original_title: film.original_title,
         description: film.description,
@@ -33,9 +33,9 @@ Review.create(title: "Graveyard of Fireflies is one of SG's most under-rated wor
 
 4.times do
     Review.create(
-        title: Faker::Internet.title,
-        content: Faker::Internet.content,
-        user_id: Faker::Number.digit.user_id
+        title: Faker::Lorem.sentence,
+        content: Faker::Lorem.paragraph,
+        user_id: Faker::Number.digit
 
     )
 end
