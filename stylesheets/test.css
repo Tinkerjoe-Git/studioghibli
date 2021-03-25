@@ -1,0 +1,77 @@
+
+
+
+html {
+    box-sizing: border-box
+  }
+  *, *::before, *::after {
+    box-sizing: inherit
+  }
+
+* {
+background: rgb(12, 57, 99);
+border: .125em solid;
+margin-bottom: .5em;
+padding: .5em
+}
+
+<style>
+    .vertical-outer {
+        display: table;
+        height: 10em
+    }
+
+    .vertical-inner {
+        display: table-cell;
+        vertical-align: middle
+    }
+</style>
+
+<div class="vertical-outer">
+    <div class="vertical-inner">
+        <p>I’m so centered it’s not even funny.</p>
+    </div>
+</div>
+
+
+<div class="example-wrapper">
+      <style>
+          .example-flexible-input .example-content {
+              background: #eee
+          }
+
+          .example-flexible-input .box {
+              background: #ccc;
+              width: 75%;
+              padding: 1em
+          }
+
+          .example-flexible-input .box-inner {
+              overflow: hidden
+          }
+
+          .example-flexible-input .box-inner p:first-child {
+              margin-top: 0
+          }
+
+          .example-flexible-input input[type="text"] {
+              box-sizing: border-box;
+              width: 100%;
+              padding: .4em .55em;
+              font-size: inherit;
+              font-family: inherit;
+              color: inherit;
+              border: 0;
+              border-radius: .25em;
+              outline: none
+          }
+      </style>
+      <div class="example example-flexible-input">
+        <div class="example-content">
+          <div class="box">
+              <div class="box-inner">
+                  <p>Your Review</p>
+                  <input type="text" placeholder="Text input">
+              </div>
+          </div>
+      </div>
